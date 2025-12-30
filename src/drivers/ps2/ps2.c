@@ -10,7 +10,7 @@ static int shift_pressed = 0;
 static int caps_lock = 0;
 
 char cmd[256];
-static int x = 0;
+int x = 0;
 
 extern void parser(void);
 
@@ -56,6 +56,18 @@ void ps2_handler_main(void) {
         vga_putc('\n');
         parser();
         x = 0;
+        print("> ");
+        return;
+    }
+
+    if (key == 0x0E) { // backspace
+        if (x > 0) {
+            x--;
+            vga_putc('\b');
+        }
+        else {
+            return;
+        }
         return;
     }
 
