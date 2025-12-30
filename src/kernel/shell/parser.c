@@ -28,7 +28,7 @@ void parser(void) {
 
     //ver
     if (cmd[0] == 'v' && cmd[1] == 'e' && cmd[2] == 'r' && cmd[3] == '\0') {
-        print("Jinux v0.01 by James Baum published with the MIT license on December 21st 2025\n");
+        print("Jinux v0.02 by James Baum published with the MIT license on December 30th 2025\n");
         return;
     }
 
