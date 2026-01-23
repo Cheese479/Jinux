@@ -29,7 +29,7 @@ void parser(void) {
 
     //ver
     if (cmd[0] == 'v' && cmd[1] == 'e' && cmd[2] == 'r' && cmd[3] == '\0') {
-        print("Jinux v0.03 by James Baum published with the MIT license on January 22nd 2026\n");
+        print("Jinux v0.03 by James Baum published with the MIT license on January 23rd 2026\n");
         return;
     }
 
@@ -43,7 +43,7 @@ void parser(void) {
         print("about - display information about Jinux!\n");
         print("echo - print text to the screen!\n");
         print("calc - simple calculator (format: calc A + B) (note: doesnt work if the result is greater than 9 and only works with integers)\n");
-                print("un - change your username (format: un NEWNAME)\n");
+        print("un - change your username (format: un NEWNAME)\n");
         return;
     }
 
