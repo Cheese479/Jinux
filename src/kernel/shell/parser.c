@@ -3,6 +3,7 @@
 
 /* defined in ps2.c */
 extern char cmd[256];
+char user[16] = "user";
 
 void parser(void) {
 
@@ -28,7 +29,7 @@ void parser(void) {
 
     //ver
     if (cmd[0] == 'v' && cmd[1] == 'e' && cmd[2] == 'r' && cmd[3] == '\0') {
-        print("Jinux v0.02 by James Baum published with the MIT license on December 30th 2025\n");
+        print("Jinux v0.03 by James Baum published with the MIT license on January 22nd 2026\n");
         return;
     }
 
@@ -42,6 +43,7 @@ void parser(void) {
         print("about - display information about Jinux!\n");
         print("echo - print text to the screen!\n");
         print("calc - simple calculator (format: calc A + B) (note: doesnt work if the result is greater than 9 and only works with integers)\n");
+                print("un - change your username (format: un NEWNAME)\n");
         return;
     }
 
@@ -66,7 +68,7 @@ void parser(void) {
     if (cmd[0] == 'c' && cmd[1] == 'a' && cmd[2] == 'l' &&
         cmd[3] == 'c' && cmd[4] == ' ') {
         int a = cmd[5] - '0';
-        int b = cmd[9] - '0'; 
+        int b = cmd[9] - '0';
         int x;
         if (cmd[7] == '+') {
             int x = a + b;
@@ -101,6 +103,18 @@ void parser(void) {
             print("\n");
         }
         return;
+    }
+    //change username
+    if (cmd [0] == 'u' && cmd[1] == 'n' && cmd[2] == ' ') {
+        int i = 3;
+        int j = 0;
+        while (cmd[i] != '\0' && j < 15) {
+            user[j] = cmd[i];
+            i++;
+            j++;
+        }
+        user[j] = '\0';
+                return;
     }
     else {
         //print unknown command message
