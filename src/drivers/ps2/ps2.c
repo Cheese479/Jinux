@@ -9,6 +9,8 @@
 static int shift_pressed = 0;
 static int caps_lock = 0;
 
+extern char user[16]; // defined in parser.c
+
 char cmd[256];
 int x = 0;
 
@@ -45,7 +47,7 @@ void ps2_handler_main(void) {
     }
 
     // ignore key release
-    
+
     if (key & 0x80)
         return;
 
@@ -56,7 +58,8 @@ void ps2_handler_main(void) {
         vga_putc('\n');
         parser();
         x = 0;
-        print("> ");
+        print(user);
+        print("@jinux> ");
         return;
     }
 
