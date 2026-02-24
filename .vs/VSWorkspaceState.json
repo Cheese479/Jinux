@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\drivers",
+    "\\src\\drivers\\ps2",
+    "\\src\\drivers\\vga",
+    "\\src\\kernel",
+    "\\src\\kernel\\shell"
+  ],
+  "SelectedNode": "\\build.sh",
+  "PreviewInSolutionExplorer": false
+}
