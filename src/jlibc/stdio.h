@@ -3,5 +3,6 @@
 
 void putchar(char c);
 void puts(const char *str);
+void puti(int i);
 
 #endif
